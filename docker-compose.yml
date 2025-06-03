@@ -47,8 +47,8 @@ services:
 
   frontend:  # React frontend app served by Nginx server (with reverse proxy)
     build:
-      context: ./frontend
-      target: final
+      context: ./frontend # Location of Dockerfile for custom frontend image
+      target: final # Use final stage image (Stage 2) where Nginx is available
       args:
         NGINX_SERVER_NAME: ${NGINX_SERVER_NAME}
     image: frontend:latest  # Custom image tag
