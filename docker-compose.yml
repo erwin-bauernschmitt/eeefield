@@ -46,9 +46,6 @@ services:
         condition: service_healthy  # Postgres must pass defined healthcheck
 
   frontend:  # React frontend app served by Nginx server (with reverse proxy)
-    # build: 
-    #   context: ./frontend  # Location of Dockerfile for custom frontend image
-    #   target: final  # Use final stage image (Stage 2) where Nginx is available
     build:
       context: ./frontend
       target: final
