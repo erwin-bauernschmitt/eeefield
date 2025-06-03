@@ -1,0 +1,47 @@
+#------------------------------------------------------------------------------
+# Git Ignore
+#
+# This `.gitignore` defines the files in the project directory that should be 
+# ignored by Git when making a commit of the project to any repo.
+# 
+# Maintainer: erwin-bauernschmitt 
+# Last reviewed: 03/06/2025
+#------------------------------------------------------------------------------
+
+### ./backend/ ###
+# Virtual environment in backend/
+backend/my-django-venv/
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+### ./frontend/ ###
+# Node modules folder
+frontend/node_modules/
+# Ignore package-lock.json (generate your own and remove this when ready)
+frontend/package-lock.json
+# HTTPS certs (generate your own self-signed certs, device-specific)
+*.pem
+*.key
+
+### ./postgres/ ###
+# Database data directory and any dumps
+postgres/data/
+postgres/*.sql
+
+### ./ ###
+# Production environment file (sensitive)
+.env.prod
+# The centralised logs folder from dev mode
+logs/
+# Catch all other logs not in specific dirs
+*.log
+*.out
+*.pid
+*.err
+# Windows
+desktop.ini
+# VS Code
+.vscode/
