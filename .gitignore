@@ -20,8 +20,6 @@ __pycache__/
 ### ./frontend/ ###
 # Node modules folder
 frontend/node_modules/
-# Ignore package-lock.json (generate your own and remove this when ready)
-frontend/package-lock.json
 # HTTPS certs (generate your own self-signed certs, device-specific)
 *.pem
 *.key
