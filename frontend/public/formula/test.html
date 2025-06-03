@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EE Forumla Sheet</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>     
+</head>
+<body>
+
+<h2 id="electromagnetic-theory-heading" class="collapsible-heading">Electromagnetic Theory <span class="chevron">▼</span></h2>
+<div class="content expanded">
+
+    <h3 id="electrostatics-heading" class="collapsible-heading">Electrostatics <span class="chevron">▼</span></h3>
+    <div class="content expanded">
+        
+        <div id="eq16" class="equation-container">
+            <div class="equation-title" id="eq16-title">Coulomb's Law</div>
+            <div class="equation math-display" id="eq16-equation">
+                <span class="math">\[ \mathbf{F}_{12} = 
+                    \dfrac{q_1 q_2 (\mathbf{r}_1 - \mathbf{r}_2)}{4 \pi \varepsilon \left| \mathbf{r}_1 - \mathbf{r}_2 \right|^3}
+                    = 
+                    \dfrac{q_1 q_2 \mathbf{\hat{r}}_{12}}{4 \pi \varepsilon \left| \mathbf{\hat{r}}_{12} \right|^2} \]
+                </span>
+            </div>
+            <button class="button" onclick="toggleSection('eq16-explanation')">?</button>
+            <button class="button" onclick="toggleSection('eq16-example')">Ex</button>
+        </div>
+        <div id="eq16-explanation">
+            The electrostatic force exerted by a charge \( q_1 \) located at \( \mathbf{r_1} \) on another charge \( q_2 \) located at \( \mathbf{r_2} \). 
+            The line of force is specified by the unit vector \( \mathbf{\hat{r}}_{12} \), and the direction depends on the charges (like charges repel, opposite charges attract).
+            This force follows an inverse-square law, where \( F \propto 1 / r^2 \). The force is also modulated by the medium's electrical permittivity \( \varepsilon = \varepsilon_0 \varepsilon_r \). 
+        </div>
+        <div id="eq16-example" class="hidden"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

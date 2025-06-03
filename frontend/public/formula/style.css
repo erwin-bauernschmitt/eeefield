@@ -1,0 +1,393 @@
+body {
+    margin: 8px;
+    margin-left: calc(20% + 8px);
+    transition: margin-left 0.5s; /* Smooth transition for the margin-left adjustment */
+    font-family: 'Times New Roman', Times, serif; /* Sets Times New Roman as the font for the entire page */
+}
+
+.equation-container { 
+    display: flex; 
+    align-items: center; 
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+h2, h3, .equation-container {
+    padding-left: 15px; /* Adjust the value as needed */
+}
+
+.equation-title, .equation, .button { 
+    margin-right: 20px; 
+}
+
+
+.hidden {
+    background-color: #f5f5f5; /* Light grey background */
+    width: 90%; /* Makes the width 90% of the parent container */
+    margin: 10px auto; /* Adds margin to the top/bottom and auto margin to the left/right to center it */
+    display: none; /* Keeps the content hidden until toggled */
+    padding: 10px;
+    box-sizing: border-box;
+    /* Centering text for when the flex layout is not applied or if content exceeds the height of the container */
+    text-align: center;
+}
+
+/* Add this if you want to also ensure that the content inside the .hidden is centered both vertically and horizontally when visible */
+.hidden.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.equation-title {
+    flex: 2.5; /* 20% of the space */
+}
+
+.equation {
+    flex: 7.5; /* 80% of the space */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: content;
+}
+
+.explanation, .example {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+mjx-container, .mjx-chtml {
+    font-size: inherit !important; /* Inherits the font size from the parent element */
+}
+
+
+
+
+
+
+
+.transform-table {
+    /* width: 80%; Adjusts the table width, making it a bit narrower than the container */
+    margin: 0px auto; /* Centers the table horizontally */
+    border-collapse: collapse; /* Ensures borders merge nicely */
+    text-align: center; /* Aligns text to the center */
+    /* table-layout: fixed;  Ensures columns have equal width */
+    width: auto;  /* Allow table to adjust to content width */
+}
+
+
+
+.transform-table tr:last-child th {
+    /* background-color: #f5f5f5; Light grey background for heading row */
+    font-weight: bold; /* Bold font for heading row */
+    border-bottom: 1.5px solid #000000;
+    padding: 10px 25px;
+}
+
+.transform-table td {
+    /* width: 50%; Ensures equal width distribution between columns */
+    padding: 10px 25px;  /*  top/bottom,  left/right */
+}
+
+
+.transform-table tr:last-child td {
+    border-bottom: 1.5px solid #000000; /* Adds a bottom border to the last row */
+}
+
+
+
+
+
+
+
+.values-table {
+    /* width: 80%; Adjusts the table width, making it a bit narrower than the container */
+    margin: 0px auto; /* Centers the table horizontally */
+    border-collapse: collapse; /* Ensures borders merge nicely */
+    text-align: center; /* Aligns text to the center */
+    /* table-layout: fixed;  Ensures columns have equal width */
+    width: auto;  /* Allow table to adjust to content width */
+}
+
+
+
+.values-table tr:last-child th {
+    /* background-color: #f5f5f5; Light grey background for heading row */
+    font-weight: bold; /* Bold font for heading row */
+    border-bottom: 1.5px solid #000000;
+    padding: 5px 10px;
+}
+
+.values-table td {
+    /* width: 50%; Ensures equal width distribution between columns */
+    padding: 5px 10px;  /*  top/bottom,  left/right */
+}
+
+
+.values-table tr:last-child td {
+    border-bottom: 1.5px solid #000000; /* Adds a bottom border to the last row */
+}
+
+
+
+
+
+
+
+
+.erf-table {
+    margin: 0px auto; /* Centers the table horizontally */
+    border-collapse: collapse; /* Ensures borders merge nicely */
+    text-align: center; /* Aligns text to the center */
+    width: auto; /* Allow table to adjust to content width */
+}
+
+.erf-table th, .erf-table td {
+    padding: 5px 10px; /* top/bottom, left/right */
+}
+
+.erf-table th {
+    font-weight: bold; /* Bold font for heading row */
+    border-bottom: 1.5px solid #000000; /* Border under header */
+}
+
+.erf-table tr:last-child td {
+    border-bottom: 1.5px solid #000000; /* Adds a bottom border to the last row */
+}
+
+.erf-table .base-col {
+    border-right: 1.5px solid #000000; /* Vertical line after the first column */
+}
+
+
+
+
+
+
+.collapsible-heading {
+    cursor: pointer;
+}
+
+.chevron {
+    user-select: none;
+}
+
+
+/* Initial state, content may be visible */
+.content {
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+}
+
+/* Collapsed state */
+.collapsed {
+    max-height: 0;
+}
+
+
+
+/* Side Panel */
+.side-panel {
+    position: fixed;
+    left: 0px; /* Start shown */
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #ddd;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px; /* Space for content */
+}
+
+/* Panel Toggle Button */
+.panel-toggle {
+    position: fixed;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #ddd;
+    padding: 5px;
+    z-index: 100;
+    transition: left 0.5s ease;
+}
+
+/* Content styling when panel is open */
+.content-shift {
+    transition: margin-left 0.5s;
+    margin-left: 20%; /* Shift content when panel is open */
+}
+
+/* Optional: Style for the links inside the panel */
+.panel-link {
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: block;
+    font-weight: bold;
+}
+
+.panel-sublink {
+    padding: 5px 30px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: block;
+}
+
+.panel-link:hover {
+    color: rgb(139, 29, 29);
+}
+
+
+.panel-sublink:hover {
+    color: rgb(139, 29, 29);
+}
+
+
+
+
+
+
+
+
+
+.sticky-nav {
+    position: sticky;
+    top: 8px;
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.nav-logo {
+    flex: 0 0 180px; /* Fixed width and no flex-grow */
+    padding: 5px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.search-container {
+    position: relative;
+    flex: 1;
+    padding-right: 30px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 8px 0px 8px 8px; /* Right padding to make space for the clear button */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.clear-search {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    visibility: hidden; /* Controlled by JavaScript */
+}
+
+.toggle-all {
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 0 0 120px; /* Fixed width, ensures it doesn't shrink */
+}
+
+
+.nav-toggle {
+    display: flex;  /* Ensures the icons are laid out horizontally */
+    align-items: center;  /* Centers the icons vertically */
+    padding: 0 0px;  /* Provides padding around the icons */
+}
+
+.nav-toggle span {
+    cursor: pointer;
+    padding: 0 10px;  /* Space between the icons */
+    font-size: 24px;
+    user-select: none;  /* Prevents the text/icons from being selected */
+}
+
+
+
+
+
+
+.left-svg {
+    display: block;       /* Changes display from inline to block */
+    margin-left: 0;       /* Centers the block element horizontally */
+    height: auto;         /* Maintain the aspect ratio */
+    max-width: 100%;      /* Ensures the image does not exceed its natural size */
+    /* transform-origin: center; */
+}
+
+
+.middle-svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;      /* Ensures the image does not exceed its natural size */
+    /* transform-origin: center; */
+}
+
+
+
+
+/* Add responsiveness to the layout */
+@media (max-width: 768px) {
+    .equation-title, .equation {
+        flex-direction: column;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+/* 
+.mjx-mfrac {
+    font-size: 100% !important;
+  } */

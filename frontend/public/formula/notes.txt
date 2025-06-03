@@ -1,0 +1,140 @@
+Topics To Add:
+- Calculus 
+- Geometry 
+- Matrix Algebra
+- Probability & Statistics
+- Signals & Systems
+- Control Theory
+
+
+Features To Add: 
+- Search functionality 
+- Embedded circuits
+- Prettier buttons 
+- Improve Aesthetics
+- Tab Icon
+
+
+
+Statistics:
+- Estimators (MAP, ML, MSE)
+- Law of Large Numbers
+- Maybe something on consistency?
+- Bayes' Theorem (maybe in probability tho?)
+
+
+General Probability Notes:
+- Central Limit Theorem 
+- Maybe a useful probability identities section?
+- Add a section on inverse transform sampling somewhere.
+
+
+To Add To Basic Probability Concepts:
+- Joint/vector variable defintions for CDF/PDF/PMF
+- Transformations of Variables
+- Conditional Probabilities
+- Conditional Distributions
+- Marginal Distributions 
+
+
+
+Signal Processing:
+- System Response
+- Filters
+
+
+PSA Concepts To Add:
+- Autotransformers (diagram, [N_1 + N_2] / N2, pros/cons in explanation).
+- Matrix inversion.
+- Rake equivalent pseudo-circuit.
+- Symmetrical components interactive calculator.
+- Sequence network circuit diagrams. 
+- Sequence network impedance matrix derivations. 
+
+
+BASIC MATH:
+
+Algebra:
+- Partial fraction expansion ###########
+
+RRS:
+- Boolean algebra ! see geng5507 wk1 additional slides.
+- Inclusion/exclusion principle?
+- For independent events: P(A_1 \cup A_2 \cup \dots \cup A_n) = 1 - P(\overline{A_1}) \times P(\overline{A_2}) \times \dots \times P(\overline{A_n})
+
+- Liebniz rule for integrals?
+
+Mensuration:
+- 
+
+
+Complex Numbers:
+- Euler's Formula
+- Complex form of trig equations
+- Complex form of hyperbolic equations
+- De Moivre's Theorem
+
+
+Signals and Systems:
+- Amplitude-phase representation 
+- I/Q representation 
+- Complex I/Q representation
+  - Complex envelope
+
+
+Analog Signal Modulation:
+- AM 
+- DSB-SC 
+- SSB 
+- VSB 
+- FM 
+  - Narrowband
+  - Wideband 
+  - Carson's rule
+  - Bessel function table? 
+- PM
+
+
+Digital Baseband Modulation:
+- PAM (Pulse Amplitude Modulation)
+- 
+
+Digital Carrier Modulation:
+- ASK 
+  - BASK
+  - 
+- FSK 
+- PSK 
+  - BPSK
+  - QPSK
+  - MPSK
+- QAM
+  - MQAM
+
+
+
+        <div id="eqxxx" class="equation-container">
+            <div class="equation-title" id="eqxxx-title"></div>
+            <div class="equation" id="eqxxx-equation">
+                <span class="math">\[  \]</span>
+            </div>
+            <button class="button" onclick="toggleSection('eqxxx-explanation')">?</button>
+            <button class="button" onclick="toggleSection('eqxxx-example')">Ex</button>
+        </div>
+        <div id="eqxxx-explanation" class="hidden"></div>
+        <div id="eqxxx-example" class="hidden"></div>
+
+
+
+Communications Circuits/Systems?:
+- Envelope detector 
+- 
+
+
+
+Fourier Series (def/properties/common pairs)
+Continous-Time Fourier Transform (def/properties/common pairs)
+Discrete-Time Fourier Transform (def/properties/common pairs)
+Discrete Fourier Transform
+Z Transform (def/properties/common pairs)
+
